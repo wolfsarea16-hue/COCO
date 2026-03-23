@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COCO Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Story+Script&family=Outfit:wght@800;900&family=Chango&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+    <!-- Main page wrapper for sliding -->
+    <div class="main-page" id="main-page">
+        <div class="intro-section">
+        <div class="signature">
+            Made with love, at home
+            <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        <div class="scroll-fade-wrapper">
+            <div class="intro-content">
+                <h1 class="coco-text">COCO</h1>
+                <div class="browse-btn-wrapper" id="browse-btn">
+                    <div class="browse-btn-shadow"></div>
+                    <button class="browse-btn"><span>Browse goodness</span></button>
+                </div>
+                <div class="browse-btn-wrapper right-btn">
+                    <div class="browse-btn-shadow"></div>
+                    <button class="browse-btn" id="customize-btn"><span>Customize an order</span></button>
+                </div>
+                <svg class="scroll-indicator" id="scroll-indicator" xmlns="http://www.w3.org/2000/svg" width="30" height="76" viewBox="0 0 30 76"><path fill="currentColor" d="M14.99 27.081a1.13 1.13 0 011.131 1.13v6.78a1.13 1.13 0 11-2.26 0v-6.78c0-.625.506-1.13 1.13-1.13zm1.131 44.75l3.73-3.73c.225-.225.451-.338.79-.338.34 0 .565.113.791.339.452.453.452 1.13 0 1.583l-5.65 5.65a1.114 1.114 0 01-.791.338 1.11 1.11 0 01-.791-.338l-5.65-5.65a1.094 1.094 0 010-1.583c.226-.226.452-.34.79-.34.34 0 .566.114.792.34l3.729 3.73v-15.37c0-.677.452-1.13 1.13-1.13.678 0 1.13.453 1.13 1.13v15.37zm-5.262-10.419c.576.214.878.857.68 1.432a1.14 1.14 0 01-1.437.7c-1.283-.454-4.28-1.707-6.696-4.794C.472 54.995.302 50.965.3 49.682V28.211c.002-1.115.137-5.925 3.9-9.99 4.245-4.583 9.847-4.697 10.79-4.7.936 0 6.57.095 10.821 4.7 3.755 4.068 3.872 8.88 3.87 9.99v21.471c.006 1.265-.143 5.048-2.82 8.703-2.501 3.414-5.757 4.73-6.98 5.157a1.137 1.137 0 01-1.438-.696 1.138 1.138 0 01.697-1.44c1.083-.39 3.648-1.48 5.697-4.149 2.414-3.143 2.576-6.475 2.584-7.575V28.211c0-.903-.096-5.086-3.402-8.57-3.59-3.782-8.23-3.86-9.028-3.86-.772.002-5.728.103-9.347 4.209-3.262 3.699-3.13 8.03-3.084 8.913v20.78c.011 1.104.186 4.335 2.503 7.434a12.687 12.687 0 005.796 4.295zM12.731 2.26a2.261 2.261 0 114.522.002 2.261 2.261 0 01-4.522-.002zm0 6.78a2.26 2.26 0 114.519 0 2.26 2.26 0 01-4.52 0z"></path></svg>
+            </div>
+        </div>
+        <div class="milk-svg-container">
+            <img src="milk-ezgif.com-gif-maker.svg" alt="Milk SVG" class="milk-svg">
+        </div>
+    </div>
+    
+    <div class="video-scroll-section" id="scroll-section">
+        <div class="sticky-video-container">
+            <canvas id="video-canvas"></canvas>
+        </div>
+        <div class="scroll-text-block" id="frame4-text">
+            <h2>Ingredients sourced locally</h2>
+            <p>All the ingredients are sourced locally and are organic, not making use of any preservatives, yet being good enough for a longer shelf life</p>
+        </div>
+        <div class="scroll-text-block right-aligned" id="frame6-text">
+            <h2>Re-live your childhood</h2>
+            <p>Chocolates are molded into shapes that carry a hint of nostalgia, even better for special occasions !</p>
+        </div>
+
+        <div class="bottom-buttons-container" id="end-buttons">
+            <div class="browse-btn-wrapper">
+                <div class="browse-btn-shadow"></div>
+                <button class="browse-btn" id="faq-btn"><span>FAQ</span></button>
+            </div>
+            <div class="browse-btn-wrapper">
+                <div class="browse-btn-shadow"></div>
+                <button class="browse-btn" id="policies-btn"><span>Policies</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="go-to-top-btn" id="go-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"></path>
+        </svg>
+    </button>
+    </div> <!-- End main-page -->
+
+    <!-- New Browse Page -->
+    <div class="browse-page" id="browse-page">
+        <header class="browse-header">
+            <h1 class="coco-text-small" id="back-to-home">COCO</h1>
+            <div class="search-container">
+                <div class="search-wrapper" id="search-wrapper">
+                    <svg class="search-icon" id="search-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                    <svg class="close-icon" id="search-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </div>
+            </div>
+            <div class="header-spacer"></div>
+        </header>
+
+        <main class="browse-content">
+            <div class="product-grid">
+                <div class="product-panel">
+                    <div class="product-panel-top">
+                        <img src="chocolates/dino1.png" class="placeholder-svg" alt="Dinosaurs">
+                    </div>
+                    <div class="product-panel-bottom">
+                        <h3 class="product-name">Dinosaurs</h3>
+                    </div>
+                </div>
+                <div class="product-panel">
+                    <div class="product-panel-top">
+                        <img src="chocolates/tree.png" class="placeholder-svg" alt="Christmas">
+                    </div>
+                    <div class="product-panel-bottom">
+                        <h3 class="product-name">Christmas</h3>
+                    </div>
+                </div>
+                <div class="product-panel">
+                    <div class="product-panel-top">
+                        <img src="chocolates/classics1.png" class="placeholder-svg" alt="Bite sized">
+                    </div>
+                    <div class="product-panel-bottom">
+                        <h3 class="product-name">Bite sized</h3>
+                    </div>
+                </div>
+                <div class="product-panel">
+                    <div class="product-panel-top">
+                        <img src="chocolates/heart.png" class="placeholder-svg" alt="What is love?">
+                    </div>
+                    <div class="product-panel-bottom">
+                        <h3 class="product-name">What is love? <svg class="inline-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></h3>
+                    </div>
+                </div>
+                <div class="product-panel">
+                    <div class="product-panel-top">
+                        <img src="chocolates/shape1.png" class="placeholder-svg" alt="Geometric">
+                    </div>
+                    <div class="product-panel-bottom">
+                        <h3 class="product-name">Geometric</h3>
+                    </div>
+                </div>
+                <div class="product-panel">
+                    <div class="product-panel-top">
+                        <img src="chocolates/bear.png" class="placeholder-svg" alt="Classic cuties">
+                    </div>
+                    <div class="product-panel-bottom">
+                        <h3 class="product-name">Classic cuties</h3>
+                    </div>
+                </div>
+                <div class="product-panel">
+                    <div class="product-panel-top">
+                        <img src="chocolates/gift.png" class="placeholder-svg" alt="Gifts? For me?">
+                    </div>
+                    <div class="product-panel-bottom">
+                        <h3 class="product-name">Gifts? For me? <svg class="inline-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg></h3>
+                    </div>
+                </div>
+                <div class="product-panel">
+                    <div class="product-panel-top">
+                        <img src="chocolates/flower.png" class="placeholder-svg" alt="Flower frenzy">
+                    </div>
+                    <div class="product-panel-bottom">
+                        <h3 class="product-name">Flower frenzy</h3>
+                    </div>
+                </div>
+                <div class="product-panel">
+                    <div class="product-panel-top">
+                        <img src="chocolates/rose.png" class="placeholder-svg" alt="Roses are red chocolate">
+                    </div>
+                    <div class="product-panel-bottom">
+                        <h3 class="product-name">Roses are <span class="strikethrough">red</span> chocolate</h3>
+                    </div>
+                </div>
+                <div class="product-panel">
+                    <div class="product-panel-top">
+                        <img src="chocolates/pig.png" class="placeholder-svg" alt="Animals">
+                    </div>
+                    <div class="product-panel-bottom">
+                        <h3 class="product-name">Animals</h3>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Product Details Page -->
+    <div class="product-details-page" id="product-details-page">
+        <header class="browse-header">
+            <h1 class="coco-text-small" id="details-back-btn">COCO</h1>
+            <div class="header-spacer"></div>
+        </header>
+
+        <main class="details-content">
+            <div class="details-left">
+                <div class="slider-arrow left-arrow" id="slider-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </div>
+                <div class="carousel-cards-container">
+                    <div class="carousel-card" id="card-0">
+                        <img id="img-0" src="" alt="Product view">
+                    </div>
+                    <div class="carousel-card" id="card-1">
+                        <img id="img-1" src="" alt="Product view">
+                    </div>
+                    <div class="carousel-card" id="card-2">
+                        <img id="img-2" src="" alt="Product view">
+                    </div>
+                </div>
+                <div class="slider-arrow right-arrow" id="slider-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="details-right">
+                <h2 class="detail-title" id="detail-title">Dinosaurs</h2>
+                
+                <div class="options-section">
+                    <h4 class="options-label">Flavors offered:</h4>
+                    <div class="options-grid flavor-options">
+                        <button class="pill-btn flavor-btn">Dark chocolate</button>
+                        <button class="pill-btn flavor-btn">White chocolate</button>
+                        <button class="pill-btn flavor-btn">Milk chocolate</button>
+                        <button class="pill-btn flavor-btn popular-pick">Peanut</button>
+                        <button class="pill-btn flavor-btn">Roasted almond</button>
+                        <button class="pill-btn flavor-btn">Caramel</button>
+                        <button class="pill-btn flavor-btn">Oreo</button>
+                        <button class="pill-btn flavor-btn">Hazelnut</button>
+                        <button class="pill-btn flavor-btn">Mixed nuts</button>
+                    </div>
+                </div>
+
+                <div class="options-section">
+                    <h4 class="options-label">Order size:</h4>
+                    <div class="options-flex size-options">
+                        <button class="pill-btn size-btn">250 gm</button>
+                        <button class="pill-btn size-btn">500 gm</button>
+                        <button class="pill-btn size-btn">1 kg</button>
+                    </div>
+                </div>
+
+                <div class="options-section">
+                    <h4 class="options-label">Don't see an option you want? Go custom</h4>
+                    <div class="options-flex size-options">
+                        <button class="pill-btn custom-order-btn">Custom order</button>
+                    </div>
+                </div>
+
+                <div class="browse-btn-wrapper place-order-wrapper">
+                    <div class="browse-btn-shadow"></div>
+                    <button class="browse-btn" id="place-order-btn"><span>Place order</span></button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- FAQ Page -->
+    <div class="faq-page" id="faq-page">
+        <header class="faq-header">
+            <h1 class="coco-text-small" id="faq-back-to-home">COCO</h1>
+            <div class="search-container">
+                <div class="faq-search-wrapper" id="faq-search-wrapper">
+                    <svg class="search-icon" id="faq-search-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" class="search-input" id="faq-search-input" placeholder="Search FAQs...">
+                    <svg class="close-icon" id="faq-search-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </div>
+            </div>
+            <div class="header-spacer"></div>
+        </header>
+
+        <main class="faq-content">
+            <div class="faq-container" id="faq-container">
+                <!-- FAQ categories and questions will be injected here by JS -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Policies Page -->
+    <div class="policies-page" id="policies-page">
+        <header class="policies-header">
+            <h1 class="coco-text-small" id="policies-back-to-home">COCO</h1>
+            <div class="header-spacer"></div>
+        </header>
+
+        <main class="policies-content">
+            <div class="policies-container" id="policies-container">
+                <!-- Policies content will be injected here by JS -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Customize Order Page -->
+    <div class="customize-page" id="customize-page">
+        <header class="browse-header">
+            <h1 class="coco-text-small" id="customize-back-btn">COCO</h1>
+            <div class="header-spacer"></div>
+        </header>
+
+        <main class="customize-content">
+            <h2 class="detail-title text-center" style="font-family: 'Chango', sans-serif; font-weight: 400; font-size: 2.5rem; color: #E75480; margin-bottom: 20px;">Choose your coco's:</h2>
+            <div class="options-flex coco-options-grid justify-center">
+                <button class="pill-btn coco-option-btn">Dinosaurs</button>
+                <button class="pill-btn coco-option-btn">Christmas</button>
+                <button class="pill-btn coco-option-btn">Bite sized</button>
+                <button class="pill-btn coco-option-btn">What is love? <svg class="inline-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+                <button class="pill-btn coco-option-btn">Geometric</button>
+                <button class="pill-btn coco-option-btn">Classic cuties</button>
+                <button class="pill-btn coco-option-btn">Gifts? For me? <svg class="inline-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg></button>
+                <button class="pill-btn coco-option-btn">Flower frenzy</button>
+                <button class="pill-btn coco-option-btn">Roses are <span class="strikethrough">red</span> chocolate</button>
+                <button class="pill-btn coco-option-btn">Animals</button>
+            </div>
+
+            <div class="options-section" style="max-width: 800px; width: 100%; margin-top: 30px; margin-bottom: 20px;">
+                <h4 class="options-label text-center">Flavors offered:</h4>
+                <div class="options-flex flavor-options justify-center">
+                    <button class="pill-btn flavor-btn">Dark chocolate</button>
+                    <button class="pill-btn flavor-btn">White chocolate</button>
+                    <button class="pill-btn flavor-btn">Milk chocolate</button>
+                    <button class="pill-btn flavor-btn popular-pick">Peanut</button>
+                    <button class="pill-btn flavor-btn">Roasted almond</button>
+                    <button class="pill-btn flavor-btn">Caramel</button>
+                    <button class="pill-btn flavor-btn">Oreo</button>
+                    <button class="pill-btn flavor-btn">Hazelnut</button>
+                    <button class="pill-btn flavor-btn">Mixed nuts</button>
+                </div>
+            </div>
+
+            <div class="description-section">
+                <textarea class="custom-textarea" id="custom-order-text" placeholder="Describe your order..."></textarea>
+            </div>
+
+            <div class="browse-btn-wrapper order-btn-wrapper">
+                <div class="browse-btn-shadow"></div>
+                <button class="browse-btn" id="submit-custom-order-btn"><span>Order</span></button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
